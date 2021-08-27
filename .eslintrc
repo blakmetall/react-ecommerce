@@ -28,6 +28,13 @@
         "jest/valid-expect": "error",
         "import/prefer-default-export": 0
     },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true
+        }
+    },
+    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "jest/globals": true
