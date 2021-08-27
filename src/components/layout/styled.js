@@ -25,7 +25,7 @@ const StyledNavLink = styled(Link)`
     }
 
     @media (max-width: 991px) {
-        margin-left: 0px;
+        margin-left: 0;
     }
 `;
 

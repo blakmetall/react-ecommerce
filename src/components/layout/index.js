@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image, Container } from 'react-bootstrap';
 import AppNavbar from './navbar';
 import { StyledContainer, StyledIntroImage } from './styled';
 
