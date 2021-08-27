@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Product from '../../components/product';
 
 const HomePage = () => {
     return (
@@ -7,13 +8,13 @@ const HomePage = () => {
             <div className="mb-5">Products Page</div>
 
             <div>
-                <Link to="/product/1">Product 1</Link>
+                <Product />
             </div>
             <div>
-                <Link to="/product/2">Product 2</Link>
+                <Product />
             </div>
             <div>
-                <Link to="/product/3">Product 3</Link>
+                <Product />
             </div>
         </div>
     );

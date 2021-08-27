@@ -6,7 +6,7 @@ const AppNavbar = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand>Ecommerce Demo</Navbar.Brand>
+                <Navbar.Brand>La Jardinería</Navbar.Brand>
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
