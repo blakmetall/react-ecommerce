@@ -4,8 +4,6 @@ import Product from '../product';
 import { ProductsListWrapper } from './styled';
 
 const ProductsList = ({ products }) => {
-    console.log(products);
-
     return (
         <ProductsListWrapper className="d-flex justify-content-center justify-content-md-between mb-5">
             {products.map((product, index) => {

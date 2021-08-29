@@ -49,10 +49,32 @@ const StyledPrice = styled.div`
     top: 4px;
 `;
 
-const StyledViewBtn = styled(Link)`
-    margin-right: 10px;
-`;
-
 const StyledAddToCartBtn = styled(Button)``;
 
-export { StyledContainer, StyledImage, StyledTitle, StyledDescription, StyledPrice, StyledViewBtn, StyledAddToCartBtn };
+const StyledAmountChanger = styled.div`
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 5px;
+    border: 1px solid white;
+
+    &:hover {
+        cursor: pointer;
+    }
+`;
+
+const StyledInputAmount = styled.input`
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+`;
+
+export {
+    StyledContainer,
+    StyledImage,
+    StyledTitle,
+    StyledDescription,
+    StyledPrice,
+    StyledAddToCartBtn,
+    StyledAmountChanger,
+    StyledInputAmount,
+};
