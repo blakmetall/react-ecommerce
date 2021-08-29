@@ -1,16 +1,58 @@
 import styled from 'styled-components';
-import { Image, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
-const StyledImage = styled(Image)``;
+const StyledContainer = styled.div`
+    width: 260px;
+    margin-bottom: 60px;
 
-const StyledTitle = styled.h2``;
+    @media (max-width: 767px) {
+        width: 100%;
+        max-width: 400px;
+    }
+`;
 
-const StyledDescription = styled.p``;
+const StyledImage = styled.div.attrs((props) => {
+    return {
+        imageSrc: '/products/' + props.image,
+    };
+})`
+    width: 100%;
+    height: 200px;
+    background-image: url(${(props) => props.imageSrc});
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 20px;
 
-const StyledPrice = styled.div``;
+    @media (max-width: 767px) {
+        width: 100%;
+        height: 300px;
+    }
+`;
 
-const StyledViewBtn = styled(Button)``;
+const StyledTitle = styled(Link)`
+    font-size: 20px;
+    text-decoration: none;
+`;
+
+const StyledDescription = styled.p`
+    font-size: 14px;
+    padding-bottom: 15px;
+`;
+
+const StyledPrice = styled.div`
+    color: #74a54c;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    top: 4px;
+`;
+
+const StyledViewBtn = styled(Link)`
+    margin-right: 10px;
+`;
 
 const StyledAddToCartBtn = styled(Button)``;
 
-export { StyledImage, StyledTitle, StyledDescription, StyledPrice, StyledViewBtn, StyledAddToCartBtn };
+export { StyledContainer, StyledImage, StyledTitle, StyledDescription, StyledPrice, StyledViewBtn, StyledAddToCartBtn };

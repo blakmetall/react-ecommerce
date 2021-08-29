@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
+
+const StyledBrand = styled(Navbar.Brand)`
+    font-weight: bold;
+    color: #333;
+`;
 
 const StyledContainer = styled(Container)`
     padding-top: 50px;
@@ -15,12 +20,12 @@ const StyledIntroImage = styled.div`
 `;
 
 const StyledNavLink = styled(Link)`
-    color: #608556;
-    margin-left: 25px;
+    font-size: 17px;
+    padding: 10px 0;
+    margin-left: 35px;
     text-decoration: none;
 
     &:hover {
-        color: #608556;
         text-decoration: underline;
     }
 
@@ -29,4 +34,4 @@ const StyledNavLink = styled(Link)`
     }
 `;
 
-export { StyledContainer, StyledIntroImage, StyledNavLink };
+export { StyledContainer, StyledIntroImage, StyledNavLink, StyledBrand };

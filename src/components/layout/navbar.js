@@ -1,12 +1,12 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import { StyledNavLink } from './styled';
+import { StyledNavLink, StyledBrand } from './styled';
 
 const AppNavbar = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand>La Jardinería</Navbar.Brand>
+                <StyledBrand>La Jardinería</StyledBrand>
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
