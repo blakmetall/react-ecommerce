@@ -1,22 +1,34 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Product from '../../components/product';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import ProductsList from '../../components/products-list';
+import RenderIf from '../../components/render-if';
+import { sortByName } from '../../helpers';
 
 const HomePage = () => {
-    return (
-        <div>
-            <div className="mb-5">Products Page</div>
+    const [products, setProducts] = useState([]);
 
-            <div>
-                <Product />
-            </div>
-            <div>
-                <Product />
-            </div>
-            <div>
-                <Product />
-            </div>
-        </div>
+    useEffect(() => {
+        axios
+            .get('/database.json')
+            .then((response) => {
+                setProducts(response.data.sort(sortByName));
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+
+    return (
+        <>
+            <div className="pb-5" />
+            <div className="pb-5" />
+
+            <RenderIf isTrue={!!products.length}>
+                <ProductsList products={products} />
+            </RenderIf>
+
+            {products.length == 0 && <div>Cargando...</div>}
+        </>
     );
 };
 

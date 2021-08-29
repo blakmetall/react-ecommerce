@@ -14,7 +14,6 @@ const AppNavbar = () => {
                     <Nav className="ml-auto">
                         <StyledNavLink to="/">Home</StyledNavLink>
                         <StyledNavLink to="/products">Products</StyledNavLink>
-                        <StyledNavLink to="/favorites">Favorites</StyledNavLink>
                         <StyledNavLink to="/cart">Cart</StyledNavLink>
                     </Nav>
                 </Navbar.Collapse>
