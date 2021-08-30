@@ -13,7 +13,7 @@ import {
     StyledAmountChanger,
     StyledInputAmount,
 } from './styled';
-import { addItemToCart } from '../../store/actions/cart';
+import { setItemsToCart } from '../../store/actions/cart';
 
 const Product = ({ id, name, description, price, image }) => {
     const [amount, setAmount] = useState(1);
@@ -47,7 +47,7 @@ const Product = ({ id, name, description, price, image }) => {
     };
 
     const addItemsToCart = () => {
-        dispatch(addItemToCart({ amount, id }));
+        dispatch(setItemsToCart({ amount, id }));
     };
 
     return (
