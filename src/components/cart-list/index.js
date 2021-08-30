@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import CartProduct from '../cart-product';
+import useCartItems from './hooks/useCartItems';
 import { CartListWrapper } from './styled';
-import useCart from './hooks/useCart';
 
 const selectCart = (state) => state.cart;
 
 const CartList = ({ products }) => {
     const cart = useSelector(selectCart);
 
-    const cartItems = useCart(products, cart);
+    const cartItems = useCartItems(products, cart);
 
     return (
         <CartListWrapper className="mb-3">
-            {cartItems.map((product, index) => {
+            {cartItems.map((product) => {
                 return (
                     <CartProduct
-                        key={index}
+                        key={product.id}
                         id={product.id}
                         name={product.name}
                         description={product.description}

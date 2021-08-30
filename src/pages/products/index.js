@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductsList from '../../components/products-list';
-import RenderIf from '../../components/render-if';
 import { sortByName } from '../../helpers';
 
 const HomePage = () => {
@@ -18,14 +17,14 @@ const HomePage = () => {
             });
     }, []);
 
+    const productsLoaded = !!products.length;
+
     return (
         <>
             <div className="pb-5" />
             <div className="pb-5" />
 
-            <RenderIf isTrue={!!products.length}>
-                <ProductsList products={products} />
-            </RenderIf>
+            {productsLoaded && <ProductsList products={products} />}
 
             {products.length == 0 && <div>Cargando...</div>}
         </>

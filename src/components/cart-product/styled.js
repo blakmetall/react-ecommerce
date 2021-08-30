@@ -46,7 +46,7 @@ const StyledPrice = styled.div`
     font-weight: bold;
     margin-bottom: 20px;
     position: relative;
-    top: 0px;
+    top: 0;
 `;
 
 const StyledAddToCartBtn = styled(Button)``;
@@ -72,6 +72,22 @@ const StyledCartRow = styled.div`
     width: 100%;
 `;
 
+const StyledAddToCartWrapper = styled.div`
+    position: relative;
+`;
+
+const StyledCartAddedMsg = styled.div.attrs((props) => {
+    return {
+        visible: props.isVisible,
+    };
+})`
+    display: ${(props) => (props.visible ? 'block' : 'none')};
+    position: absolute;
+    left: 0;
+    color: #333;
+    padding-top: 10px;
+`;
+
 export {
     StyledContainer,
     StyledImage,
@@ -82,4 +98,6 @@ export {
     StyledAmountChanger,
     StyledInputAmount,
     StyledCartRow,
+    StyledAddToCartWrapper,
+    StyledCartAddedMsg,
 };

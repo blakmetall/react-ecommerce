@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductsList from '../../components/products-list';
-import RenderIf from '../../components/render-if';
 import { getFromArray } from '../../helpers';
 import { StyledIntro } from './styled';
 
@@ -19,6 +18,8 @@ const HomePage = () => {
             });
     }, []);
 
+    const productsLoaded = !!products.length;
+
     return (
         <div>
             <StyledIntro>
@@ -26,9 +27,7 @@ const HomePage = () => {
                 explorar el sitio y selecciona la planta ideal para tu casa.
             </StyledIntro>
 
-            <RenderIf isTrue={!!products.length}>
-                <ProductsList products={products} />
-            </RenderIf>
+            {productsLoaded && <ProductsList products={products} />}
 
             {products.length == 0 && <div>Cargando...</div>}
         </div>

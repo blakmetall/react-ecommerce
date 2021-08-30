@@ -4,7 +4,6 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import HomePage from './pages/home';
 import ProductsPage from './pages/products';
 import ProductPage from './pages/product';
-import FavoritesPage from './pages/favorites';
 import CartPage from './pages/cart';
 
 const AppRoutes = () => {
@@ -20,10 +19,6 @@ const AppRoutes = () => {
 
             <Route exact path="/product/:id">
                 <ProductPage />
-            </Route>
-
-            <Route exact path="/favorites">
-                <FavoritesPage />
             </Route>
 
             <Route exact path="/cart">

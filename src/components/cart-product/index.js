@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { isValidAmount } from '../../helpers';
+import { setItemsToCart } from '../../store/actions/cart';
 import {
     StyledContainer,
     StyledImage,
@@ -13,13 +14,15 @@ import {
     StyledAmountChanger,
     StyledInputAmount,
     StyledCartRow,
+    StyledAddToCartWrapper,
+    StyledCartAddedMsg,
 } from './styled';
-import { setItemsToCart } from '../../store/actions/cart';
 
 const selectCart = (state) => state.cart;
 
 const CartProduct = ({ id, name, description, price, image }) => {
     const [amount, setAmount] = useState(0);
+    const [addedToCart, setAddedToCart] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -65,6 +68,11 @@ const CartProduct = ({ id, name, description, price, image }) => {
 
     const addItemsToCart = () => {
         dispatch(setItemsToCart({ amount, id }));
+
+        setAddedToCart(true);
+        setTimeout(() => {
+            setAddedToCart(false);
+        }, 1500);
     };
 
     return (
@@ -93,9 +101,12 @@ const CartProduct = ({ id, name, description, price, image }) => {
                             <StyledAmountChanger onClick={increaseAmount}>+</StyledAmountChanger>
                         </div>
 
-                        <StyledAddToCartBtn className="btn-sm" onClick={addItemsToCart}>
-                            Actualizar carrito
-                        </StyledAddToCartBtn>
+                        <StyledAddToCartWrapper>
+                            <StyledAddToCartBtn className="btn-sm" onClick={addItemsToCart}>
+                                Actualizar carrito
+                            </StyledAddToCartBtn>
+                            <StyledCartAddedMsg isVisible={addedToCart}>Carrito actualizado</StyledCartAddedMsg>
+                        </StyledAddToCartWrapper>
                     </div>
                 </StyledCartRow>
             </div>
