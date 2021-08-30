@@ -1,0 +1,142 @@
+[
+    {
+        "id": "83295",
+        "name": "Alcatraz",
+        "description": "Es una planta herbácea vivaz, de origen sudafricano, que se cultiva como ornamental por sus vistosas espatas de color blanco.",
+        "price": 50,
+        "image": "alcatraz-min.jpg"
+    },
+    {
+        "id": "57950",
+        "name": "Begonia",
+        "description": "Es una planta terrestre, con tallos acuosos, algunas de porte semiarbustivo o incluso pequeños árboles y otras trepadoras.",
+        "price": 75,
+        "image": "begonia-min.jpg"
+    },
+    {
+        "id": "67391",
+        "name": "Kalanchoes",
+        "description": "Es una flor que permiten sobrevivir en condiciones de sequía. se caracteriza por poseer hojas o tallos grueso, mas de lo habitual.",
+        "price": 80,
+        "image": "kalanchoes-min.jpg"
+    },
+    {
+        "id": "49299",
+        "name": "Margarita california",
+        "description": "Es una flor semiarbustiva, perenne, que puede alcanzar los setenta centímetros de altura y formar grandes matas.",
+        "price": 90,
+        "image": "margarita.jpg"
+    },
+    {
+        "id": "39984",
+        "name": "Rosal",
+        "description": "Es una flor espinosa de hoja caduca de la familia de las rosáceas, nativo de Europa, el noroeste de África y Asia occidental.",
+        "price": 100,
+        "image": "rosales-min.jpg"
+    },
+    {
+        "id": "74322",
+        "name": "Cuna de moises",
+        "description": "Una de sus virtudes más importantes es que purifica el ambiente mediante la eliminación de las sustancias nocivas del aire, devolviendo al mismo tiempo oxígeno puro.",
+        "price": 55,
+        "image": "cuna-moises.jpg"
+    },
+    {
+        "id": "75493",
+        "name": "Palo de brasil",
+        "description": "Es un árbol de 7 a 15m de altura. Las ramas con espinas duras de 1 a 3cm de largo. Tiene su corteza café claro a rojiza y el centro del tallo es café muy oscuro a rojo intenso.",
+        "price": 110,
+        "image": "palo-brasil.jpg"
+    },
+    {
+        "id": "18009",
+        "name": "Ajuga",
+        "description": "Es una planta herbácea y perenne con estolones radicantes de 10-40 cm. de longitud. Hojas, oblongas y opuestas.",
+        "price": 70,
+        "image": "ajuga-min.jpg"
+    },
+    {
+        "id": "48600",
+        "name": "Gudelia",
+        "description": "Es una planta cubridora con hojas verdes brillantes y sus flores similares a las margaritas de color amarillo-naranja.",
+        "price": 55,
+        "image": "gudelia.jpg"
+    },
+    {
+        "id": "82731",
+        "name": "Oreja de ratón",
+        "description": "Es una especie botánica del género Dichondra, la cual pertenece a la familia de las convolvuláceas. Es una planta perennifolia, xerófita, rastrera, trepadora de rápido crecimiento, siempreverde.",
+        "price": 65,
+        "image": "oreja-de-raton-min.jpg"
+    },
+    {
+        "id": "68399",
+        "name": "Cacahuatillo",
+        "description": "Es una hierba de 60 cm de alto. Tiene flores amarillas, chiquitas, parecidas a las flores del cacahuate.",
+        "price": 70,
+        "image": "cacahuatillo-min.jpg"
+    },
+    {
+        "id": "22143",
+        "name": "Cipres leyland",
+        "description": "Es una árbol frondozo que alcanza un un tamaño de entre 20 y 25 metros de altura. Las hojas se presentan en ramillos con forma de escama, ligeramente aromáticas. Son de color verde oscuro, algo más pálido en el envés.",
+        "price": 120,
+        "image": "cipres-leyland.jpg"
+    },
+    {
+        "id": "44258",
+        "name": "Araucaria",
+        "description": "La casuarina es una especie de árboles semiperennes, de costas tropicales, muy útil como cortina forestal rompe viento.",
+        "price": 100,
+        "image": "araucaria-min.jpg"
+    },
+    {
+        "id": "78934",
+        "name": "Cedro limón espiral",
+        "description": "El cedro limón, también llamado ciprés limón, ciprés Monterrey, goldcrast y en ocasiones pino limón, es una árbol de hoja perenne del grupo de las coníferas.",
+        "price": 110,
+        "image": "cedro-limon-espiral-min.jpg"
+    },
+    {
+        "id": "34786",
+        "name": "Cedro limón",
+        "description": "Es una árbol de hoja perenne del grupo de las coníferas. El follaje de este árbol tiene color verde amarillento y sus hojas tienen una fragancia que recuerda al aroma de frutas cítricas.",
+        "price": 90,
+        "image": "cedro-limon.jpg"
+    },
+    {
+        "id": "29837",
+        "name": "Hortensia",
+        "description": "El género Hydrangea incluye plantas ornamentales, comúnmente conocidas como hortensias, nativas del sur y el este de Asia2 (concretamente de China, Japón, Corea, el Himalaya e Indonesia) y de América.",
+        "price": 130,
+        "image": "hortensia-min.jpg"
+    },
+    {
+        "id": "75689",
+        "name": "Lirio africano",
+        "description": "Se trata de una planta herbácea, perennifolia, rizomatosa. Procede en origen de Sudáfrica, si bien se ha extendido mucho debido a que se utiliza como planta ornamental.",
+        "price": 110,
+        "image": "lirio-africano.jpg"
+    },
+    {
+        "id": "87948",
+        "name": "Azálea",
+        "description": "Son arbustos de flor clasificadas en la actualidad en dos de los subgéneros de Rhododendron – el subgénero Pentanthera, tipificado por Rhododendron nudiflorum y el subgénero Tsutsusi con el Rhododendron tsutsusi.",
+        "price": 90,
+        "image": "azalea-min.jpg"
+    },
+    {
+        "id": "49857",
+        "name": "Bugambilia",
+        "description": "Es un género de plantas originarias de los bosques tropicales húmedos de América del Sur (Brasil, Perú y norte de Argentina).",
+        "price": 95,
+        "image": "bugambilia-min.jpg"
+    },
+    {
+        "id": "49371",
+        "name": "Amaranto",
+        "description": "Es un género de plantas ampliamente distribuido por la mayor parte de las regiones templadas y tropicales.",
+        "price": 70,
+        "image": "amaranto.jpg"
+    }
+]

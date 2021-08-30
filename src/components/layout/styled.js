@@ -16,7 +16,7 @@ const StyledIntroImage = styled.div`
     height: 350px;
     background-size: cover;
     background-position: center center;
-    background-image: url('./images/slide-plants.jpg');
+    background-image: url('/images/slide-plants.jpg');
 `;
 
 const StyledNavLink = styled(Link)`
