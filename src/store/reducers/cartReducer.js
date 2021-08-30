@@ -19,7 +19,7 @@ const setItemsToCart = (itemsInCart, { id, amount }) => {
         });
 
         const filteredItems = newItemsInCart.filter(function (obj) {
-            return obj.amount !== 0;
+            return obj.id && obj.amount !== 0;
         });
 
         return filteredItems;
@@ -32,9 +32,7 @@ export default function cartReducer(state = initialState, action) {
     switch (action.type) {
         case cartTypes.SET_ITEMS_TO_CART:
             const itemsInCart = setItemsToCart(state.itemsInCart, action.payload);
-
             console.log(itemsInCart);
-
             return {
                 ...state,
                 itemsInCart: itemsInCart,

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { isValidAmount } from '../../helpers';
 import {
@@ -15,10 +15,26 @@ import {
 } from './styled';
 import { setItemsToCart } from '../../store/actions/cart';
 
+const selectCart = (state) => state.cart;
+
 const Product = ({ id, name, description, price, image }) => {
-    const [amount, setAmount] = useState(1);
+    const [amount, setAmount] = useState(0);
 
     const dispatch = useDispatch();
+
+    const cart = useSelector(selectCart);
+
+    useEffect(() => {
+        if (cart && cart.itemsInCart && cart.itemsInCart.length) {
+            cart.itemsInCart.forEach((item) => {
+                if (item.id == id) {
+                    setAmount(item.amount);
+                }
+            });
+        }
+
+        // eslint-disable-next-line
+    }, [cart]);
 
     const productUrl = '/product/' + id;
 
