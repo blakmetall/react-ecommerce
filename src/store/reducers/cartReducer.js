@@ -31,11 +31,9 @@ const setItemsToCart = (itemsInCart, { id, amount }) => {
 export default function cartReducer(state = initialState, action) {
     switch (action.type) {
         case cartTypes.SET_ITEMS_TO_CART:
-            const itemsInCart = setItemsToCart(state.itemsInCart, action.payload);
-            console.log(itemsInCart);
             return {
                 ...state,
-                itemsInCart: itemsInCart,
+                itemsInCart: setItemsToCart(state.itemsInCart, action.payload),
             };
         case cartTypes.CLEAR_CART:
             return {

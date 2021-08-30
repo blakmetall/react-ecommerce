@@ -12,8 +12,6 @@ const CartList = ({ products }) => {
 
     const cartItems = useCart(products, cart);
 
-    console.log(cartItems);
-
     return (
         <CartListWrapper className="mb-3">
             {cartItems.map((product, index) => {

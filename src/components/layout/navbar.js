@@ -13,8 +13,8 @@ const AppNavbar = () => {
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav className="ml-auto">
                         <StyledNavLink to="/">Home</StyledNavLink>
-                        <StyledNavLink to="/products">Products</StyledNavLink>
-                        <StyledNavLink to="/cart">Cart</StyledNavLink>
+                        <StyledNavLink to="/products">Productos</StyledNavLink>
+                        <StyledNavLink to="/cart">Carrito</StyledNavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

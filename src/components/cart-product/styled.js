@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const StyledContainer = styled.div`
-    width: 260px;
+    width: 100%;
     margin-bottom: 60px;
 
     @media (max-width: 767px) {
@@ -17,16 +17,16 @@ const StyledImage = styled.div.attrs((props) => {
         imageSrc: '/products/' + props.image,
     };
 })`
-    width: 100%;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     background-image: url(${(props) => props.imageSrc});
     background-size: cover;
     background-position: center center;
     margin-bottom: 20px;
 
     @media (max-width: 767px) {
-        width: 100%;
-        height: 300px;
+        width: 100px;
+        height: 100px;
     }
 `;
 
@@ -46,7 +46,7 @@ const StyledPrice = styled.div`
     font-weight: bold;
     margin-bottom: 20px;
     position: relative;
-    top: 4px;
+    top: 0px;
 `;
 
 const StyledAddToCartBtn = styled(Button)``;
@@ -68,6 +68,10 @@ const StyledInputAmount = styled.input`
     margin: 0 10px;
 `;
 
+const StyledCartRow = styled.div`
+    width: 100%;
+`;
+
 export {
     StyledContainer,
     StyledImage,
@@ -77,4 +81,5 @@ export {
     StyledAddToCartBtn,
     StyledAmountChanger,
     StyledInputAmount,
+    StyledCartRow,
 };

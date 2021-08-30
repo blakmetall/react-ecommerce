@@ -12,6 +12,7 @@ import {
     StyledAddToCartBtn,
     StyledAmountChanger,
     StyledInputAmount,
+    StyledCartRow,
 } from './styled';
 import { setItemsToCart } from '../../store/actions/cart';
 
@@ -68,27 +69,35 @@ const CartProduct = ({ id, name, description, price, image }) => {
 
     return (
         <StyledContainer>
-            <Link to={productUrl}>
-                <StyledImage className="img-thumbnail" image={image} />
-            </Link>
-
-            <div className="d-flex justify-content-between">
-                <StyledTitle to={productUrl}>{name}</StyledTitle>
-                <StyledPrice>${price}</StyledPrice>
-            </div>
-
-            <StyledDescription>{description}</StyledDescription>
-
-            <div className="d-flex justify-content-between">
-                <div className="d-flex align-items-center">
-                    <StyledAmountChanger onClick={reduceAmount}>-</StyledAmountChanger>
-                    <StyledInputAmount type="text" value={amount} onChange={(e) => changeAmount(e)} />
-                    <StyledAmountChanger onClick={increaseAmount}>+</StyledAmountChanger>
+            <div className="d-flex mb-5">
+                <div className="me-3">
+                    <Link to={productUrl}>
+                        <StyledImage className="img-thumbnail" image={image} />
+                    </Link>
                 </div>
 
-                <StyledAddToCartBtn className="btn-sm" onClick={addItemsToCart}>
-                    Actualizar carrito
-                </StyledAddToCartBtn>
+                <StyledCartRow>
+                    <div className="d-flex">
+                        <StyledTitle className="me-3" to={productUrl}>
+                            {name}
+                        </StyledTitle>
+                        <StyledPrice>${price}</StyledPrice>
+                    </div>
+
+                    <StyledDescription>{description}</StyledDescription>
+
+                    <div className="d-flex">
+                        <div className="d-flex align-items-center me-3">
+                            <StyledAmountChanger onClick={reduceAmount}>-</StyledAmountChanger>
+                            <StyledInputAmount type="text" value={amount} onChange={(e) => changeAmount(e)} />
+                            <StyledAmountChanger onClick={increaseAmount}>+</StyledAmountChanger>
+                        </div>
+
+                        <StyledAddToCartBtn className="btn-sm" onClick={addItemsToCart}>
+                            Actualizar carrito
+                        </StyledAddToCartBtn>
+                    </div>
+                </StyledCartRow>
             </div>
         </StyledContainer>
     );
